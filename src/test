@@ -1,0 +1,243 @@
+// const handleSuggestionClick = (suggestion: string) => {
+//   console.log(suggestion)
+//   if (editedTag !== null && inputValue !== null) {
+//     const start = inputValue.slice(0, editedTag);
+//     const end = inputValue.slice(editedTag);
+//     const updatedInputValue = start + suggestion + end;
+//     setInputValue(updatedInputValue);
+//     setExpression(updatedInputValue);
+//     setEditedTag(null);
+//     setFilteredSuggestions([]);
+//   }
+// };
+
+// const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   const value = e.target.value;
+//   setExpression(value);
+//   const trimmedValue = value.trim();
+
+//   if (trimmedValue === "") {
+//     setFilteredSuggestions([]);
+//   } else {
+//     const filtered = suggestions.filter((suggestion) =>
+//       suggestion.title.toLowerCase().includes(trimmedValue.toLowerCase())
+//     );
+
+//     setFilteredSuggestions(filtered.length > 0 ? filtered : []);
+//   }
+// };
+// const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   const value = e.target.value;
+//   setExpression(value);
+//   const trimmedValue = value.trim();
+
+//   if (trimmedValue === "") {
+//     setFilteredSuggestions([]);
+//   } else {
+//     const filtered = suggestions.filter((suggestion) =>
+//       suggestion.title.toLowerCase().includes(trimmedValue.toLowerCase())
+//     );
+
+//     setFilteredSuggestions(filtered.length > 0 ? filtered : []);
+//   }
+// };
+
+// const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   const value = e.target.value;
+
+//   // Extract the last portion of the expression string following the last operator
+//   const operators = /[+\-*/^]+/;
+//   const parts = value.split(operators);
+//   const trimmedValue = parts.length > 1 ? parts[parts.length - 1] : value;
+
+//   setExpression(value);
+
+//   if (trimmedValue === "") {
+//     setFilteredSuggestions([]);
+//   } else {
+//     const filtered = suggestions.filter((suggestion) =>
+//       suggestion.title.toLowerCase().includes(trimmedValue.toLowerCase())
+//     );
+
+//     setFilteredSuggestions(filtered.length > 0 ? filtered : []);
+//   }
+// };
+
+//
+
+// const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   const value = e.target.value;
+//   setExpression(value);
+//   const trimmedValue = value.trim();
+
+//   if (trimmedValue === "") {
+//     setFilteredSuggestions([]);
+//   } else {
+//     const filtered = suggestions.filter((suggestion) =>
+//       suggestion.title.toLowerCase().includes(trimmedValue.toLowerCase())
+//     );
+
+//     setFilteredSuggestions(filtered.length > 0 ? filtered : []);
+//   }
+// };
+// const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   const value = e.target.value;
+//   setExpression(value);
+//   const trimmedValue = value.trim();
+
+//   if (trimmedValue === "") {
+//     setFilteredSuggestions([]);
+//   } else {
+//     const filtered = suggestions.filter((suggestion) =>
+//       suggestion.title.toLowerCase().includes(trimmedValue.toLowerCase())
+//     );
+
+//     setFilteredSuggestions(filtered.length > 0 ? filtered : []);
+//   }
+// };
+
+// const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   const value = e.target.value;
+
+//   // Extract the last portion of the expression string following the last operator
+//   const operators = /[+\-*/^]+/;
+//   const parts = value.split(operators);
+//   const trimmedValue = parts.length > 1 ? parts[parts.length - 1] : value;
+
+//   setExpression(value);
+
+//   if (trimmedValue === "") {
+//     setFilteredSuggestions([]);
+//   } else {
+//     const filtered = suggestions.filter((suggestion) =>
+//       suggestion.title.toLowerCase().includes(trimmedValue.toLowerCase())
+//     );
+
+//     setFilteredSuggestions(filtered.length > 0 ? filtered : []);
+//   }
+// };
+
+// const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   const value = e.target.value;
+
+//   const operators = /[+\-*/^]+/;
+//   const parts = value.split(operators);
+//   const currentInput = parts.length > 1 ? parts[parts.length - 1] : value;
+
+//   setExpression(value);
+
+//   if (currentInput === "") {
+//     setFilteredSuggestions([]);
+//   } else {
+//     const filtered = suggestions.filter((suggestion) =>
+//       suggestion.title.toLowerCase().includes(currentInput.toLowerCase())
+//     );
+
+//     setFilteredSuggestions(filtered.length > 0 ? filtered : []);
+//   }
+// };
+
+// const handleSuggestionClick = (suggestion: string) => {
+//   if (editedTag !== null && inputValue !== null) {
+//     const start = inputValue.slice(0, editedTag);
+//     const end = inputValue.slice(editedTag);
+//     const updatedInputValue = start + suggestion + end;
+//     setInputValue(updatedInputValue);
+//     setExpression(updatedInputValue);
+//     setEditedTag(null);
+//     setFilteredSuggestions([]);
+//   } else {
+//     setInputValue((prevInputValue) => prevInputValue + suggestion);
+//     setExpression((prevInputValue) => prevInputValue + suggestion);
+//     setFilteredSuggestions([]);
+//   }
+// };
+
+// const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+//   if (e.key === "Enter" && inputValue.trim() !== "") {
+//     let type = "";
+//     const operators = ["+", "-", "*", "(", ")", "^", "/"];
+//     if (operators.includes(inputValue.trim())) {
+//       type = "operator";
+//     }
+
+//     const newTagOperand: Operand = {
+//       title: inputValue.trim(),
+//       subTitle: null,
+//       type,
+//       value: 0,
+//       rightHandle: null,
+//     };
+//     setTags([...tags, newTagOperand]);
+//     setInputValue("");
+//   }
+// };
+
+
+
+  // useEffect(() => {
+  //   const operators = ["+", "-", "*", "(", ")", "^", "/"];
+  //   if (tags.length === 0) {
+  //     setAmount(0);
+  //     return;
+  //   }
+  //   let hasOperator = false;
+  //   let expression = "";
+  //   let consecutiveNumeric = false;
+
+  //   for (const tag of tags) {
+  //     if (tag.type === "operator" || operators.includes(tag.title)) {
+  //       hasOperator = true;
+  //       expression += tag.title;
+  //       consecutiveNumeric = false;
+  //     } else {
+  //       expression += tag.value;
+  //       if (consecutiveNumeric) {
+  //         setAmount("#ERROR");
+  //         return;
+  //       }
+  //       consecutiveNumeric = true;
+  //     }
+  //   }
+
+  //   try {
+  //     if (!hasOperator) {
+  //       setAmount(expression);
+  //       return;
+  //     }
+  //     const total = eval(expression);
+  //     if (!isNaN(total)) {
+  //       setAmount(total);
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }, [tags]);
+
+
+
+
+  // 
+  // useEffect(() => {
+  //   const operators = ["+", "-", "*", "(", ")", "^", "/"];
+
+  //   const expression = tags
+  //     .map((tag) => (tag.type !== "operator" ? tag.value : tag.title))
+  //     .join("");
+
+  //   console.log(expression);
+  //   try {
+  //     if (expression && expression.match(/[\d]$/)) {
+  //       console.log(expression);
+  //       const total = evaluate(expression);
+  //       // if (!isNaN(total)) {
+  //       //   setAmount(total);
+  //       // }
+  //       if (total) {
+  //         setAmount(total);
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }, [tags]);
